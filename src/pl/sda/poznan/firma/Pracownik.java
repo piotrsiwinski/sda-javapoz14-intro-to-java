@@ -1,6 +1,7 @@
 package pl.sda.poznan.firma;
 
 public class Pracownik {
+  private int id;
   private String imie;
   private String nazwisko;
   private double pensja;
@@ -15,6 +16,14 @@ public class Pracownik {
   public Pracownik(String imie, String nazwisko, double pensja, String email) {
     this(imie, nazwisko, pensja);
     this.email = email;
+  }
+
+  public int getId() {
+    return id;
+  }
+
+  public void setId(int id) {
+    this.id = id;
   }
 
   public String getImie() {
