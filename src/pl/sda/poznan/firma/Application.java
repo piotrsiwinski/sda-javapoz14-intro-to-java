@@ -14,13 +14,14 @@ public class Application {
       System.out.println("Wybór: ");
       int wybor = odczyt.nextInt();
       switch (wybor) {
-        case 1:
+        case 2:
           {
 
             // pobierz dane o nowym pracowniku
             // wywołaj metodę dodajPracownika() na obiekcie typu Firma
-
-            firma.dodajPracownika(null);
+            Pracownik prac = new Pracownik("imie", "naz",2000);
+            boolean wynik = firma.dodajPracownika(prac);
+            // wypisz czy udalo sie zapisac
             System.out.println("Implementacja w przygotowaniu");
             break;
           }
