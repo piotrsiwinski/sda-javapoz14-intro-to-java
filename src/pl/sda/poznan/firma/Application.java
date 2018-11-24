@@ -6,6 +6,8 @@ public class Application {
   private static Scanner odczyt = new Scanner(System.in);
 
   public static void main(String[] args) {
+    Firma firma = new Firma("sda");
+    System.out.println("Witaj w firmie!");
     boolean czyWyjsc = false;
     while (!czyWyjsc) {
       printMenu();
@@ -14,8 +16,11 @@ public class Application {
       switch (wybor) {
         case 1:
           {
+
             // pobierz dane o nowym pracowniku
             // wywołaj metodę dodajPracownika() na obiekcie typu Firma
+
+            firma.dodajPracownika(null);
             System.out.println("Implementacja w przygotowaniu");
             break;
           }
