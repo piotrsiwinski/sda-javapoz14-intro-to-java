@@ -14,6 +14,8 @@ public class Application {
       switch (wybor) {
         case 1:
           {
+            // pobierz dane o nowym pracowniku
+            // wywołaj metodę dodajPracownika() na obiekcie typu Firma
             System.out.println("Implementacja w przygotowaniu");
             break;
           }
