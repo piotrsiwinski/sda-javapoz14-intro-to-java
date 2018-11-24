@@ -1,0 +1,1 @@
+czy ten tekst nadpisze poprzedni plik?no tym razem powinno dopisac do konca plikuto powinno byc od nowej linii
