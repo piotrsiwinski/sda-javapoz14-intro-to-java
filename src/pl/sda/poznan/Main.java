@@ -1,6 +1,8 @@
 package pl.sda.poznan;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
 
 public class Main {
   private static final String PATH_TO_FILE =
@@ -9,8 +11,10 @@ public class Main {
   private static final int wiek = 0;
 
   public static void main(String[] args) {
-
-    // decorator pattern
-    //        BufferedReader czytnik = new BufferedReader(new FileReader(PATH_TO_FILE));
+    try {
+      BufferedReader czytnik = new BufferedReader(new FileReader(PATH_TO_FILE));
+    } catch (FileNotFoundException ex) {
+      System.out.println("Nie udalo sie odczytac z pliku");
+    }
   }
 }

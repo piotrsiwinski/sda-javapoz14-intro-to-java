@@ -10,13 +10,13 @@ public class ArithmeticExceptionExample {
     System.out.println("Podaj druga liczbe");
     int b = czytnik.nextInt();
     int wynik = 0;
-    try {
-      wynik = a / b;
-      System.out.println("Udalo sie obliczyc");
-      System.out.println(wynik);
-    } catch (ArithmeticException ex) {
-      System.out.println("Nie dziel przez 0!");
-    }
-    System.out.println("KONIEC PROGRAMU");
+    wynik = a / b;
+//    try {
+//      System.out.println("Udalo sie obliczyc");
+//      System.out.println(wynik);
+//    } catch (ArithmeticException ex) {
+//      System.out.println("Nie dziel przez 0!");
+//    }
+//    System.out.println("KONIEC PROGRAMU");
   }
 }
