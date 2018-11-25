@@ -16,7 +16,10 @@ public class Application {
       switch (wybor) {
         case 1:
         {
-
+          // zaimplementuj metode toString w klasie Pracownik celem zwrocenia opisu obiektu
+          // zaimplementuj metodę do zwracania tablicy pracownikow w klasie Firma, np. getPracownicy()
+          // wywolaj metode getPracownicy() i przejdz przez tablice pracownikow
+          // na kazdym z pracownikow wywolaj metode toString
         }
         case 2:
             wstawPracownika(firma);
