@@ -36,7 +36,7 @@ public class XmlPracownikWriter implements PracownikWriter {
 
     private PracownikCollection() {}
 
-    public PracownikCollection(Pracownik[] pracownicy) {
+    PracownikCollection(Pracownik[] pracownicy) {
       this.pracownicy = pracownicy;
     }
   }
