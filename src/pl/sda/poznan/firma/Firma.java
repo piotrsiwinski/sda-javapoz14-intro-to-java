@@ -12,6 +12,11 @@ public class Firma {
     liczbaPracownikow = 0;
   }
 
+  public Pracownik[] getPracownicy() {
+    return pracownicy;
+  }
+
+
   public boolean dodajPracownika(Pracownik pracownik) {
     if (liczbaPracownikow == MAX_EMPLOYEES_COUNT) {
       return false;

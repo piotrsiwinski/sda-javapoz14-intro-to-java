@@ -60,12 +60,20 @@ public class Pracownik {
 
   @Override
   public String toString() {
-    return "Pracownik{" +
-        "id=" + id +
-        ", imie='" + imie + '\'' +
-        ", nazwisko='" + nazwisko + '\'' +
-        ", pensja=" + pensja +
-        ", email='" + email + '\'' +
-        '}';
+    return "Pracownik{"
+        + "id="
+        + id
+        + ", imie='"
+        + imie
+        + '\''
+        + ", nazwisko='"
+        + nazwisko
+        + '\''
+        + ", pensja="
+        + pensja
+        + ", email='"
+        + email
+        + '\''
+        + '}';
   }
 }
