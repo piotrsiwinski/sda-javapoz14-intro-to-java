@@ -1,6 +1,5 @@
 package pl.sda.poznan.firma;
 
-import com.sun.xml.internal.txw2.annotation.XmlElement;
 
 import javax.xml.bind.annotation.XmlAttribute;
 
