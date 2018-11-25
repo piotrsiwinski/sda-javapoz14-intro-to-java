@@ -1,11 +1,18 @@
 package pl.sda.poznan.firma;
 
+import com.sun.xml.internal.txw2.annotation.XmlElement;
+
+import javax.xml.bind.annotation.XmlAttribute;
+
 public class Pracownik {
+
   private int id;
   private String imie;
   private String nazwisko;
   private double pensja;
   private String email;
+
+  private Pracownik() {}
 
   public Pracownik(String imie, String nazwisko, double pensja) {
     this.imie = imie;
@@ -18,6 +25,7 @@ public class Pracownik {
     this.email = email;
   }
 
+  @XmlAttribute
   public int getId() {
     return id;
   }
