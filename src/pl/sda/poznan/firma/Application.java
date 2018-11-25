@@ -1,5 +1,7 @@
 package pl.sda.poznan.firma;
 
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Application {
@@ -15,20 +17,8 @@ public class Application {
       int wybor = odczyt.nextInt();
       switch (wybor) {
         case 1:
-          {
-            // zaimplementuj metode toString w klasie Pracownik celem zwrocenia opisu obiektu - ok
-            // zaimplementuj metodę do zwracania tablicy pracownikow w klasie Firma, np.
-            // getPracownicy() - ok
-            // wywolaj metode getPracownicy() i przejdz przez tablice pracownikow
-            Pracownik[] pracownicy = firma.getPracownicy();
-
-            for (Pracownik prac: pracownicy) {
-              System.out.println(prac.toString());
-            }
-
-            // na kazdym z pracownikow wywolaj metode toString
-            break;
-          }
+          wyswietlPracownikow(firma);
+          break;
         case 2:
           wstawPracownika(firma);
           break;
@@ -36,6 +26,13 @@ public class Application {
           czyWyjsc = true;
           break;
       }
+    }
+  }
+
+  private static void wyswietlPracownikow(Firma firma) {
+    Pracownik[] pracownicy = firma.getPracownicy();
+    for (Pracownik prac : pracownicy) {
+      System.out.println(prac.toString());
     }
   }
 

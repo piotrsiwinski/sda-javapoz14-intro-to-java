@@ -19,6 +19,9 @@ public class Firma {
   }
 
   public boolean dodajPracownika(Pracownik pracownik) {
+    if (pracownik == null) {
+      throw new IllegalArgumentException("Pracownik nie moze byc nullem");
+    }
     if (liczbaPracownikow == MAX_EMPLOYEES_COUNT) {
       return false;
     }
