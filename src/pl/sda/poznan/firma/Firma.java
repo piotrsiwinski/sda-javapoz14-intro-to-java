@@ -1,5 +1,7 @@
 package pl.sda.poznan.firma;
 
+import java.util.Arrays;
+
 public class Firma {
   private static final int MAX_EMPLOYEES_COUNT = 20;
   private String name;
@@ -13,9 +15,8 @@ public class Firma {
   }
 
   public Pracownik[] getPracownicy() {
-    return pracownicy;
+    return Arrays.copyOf(pracownicy, liczbaPracownikow);
   }
-
 
   public boolean dodajPracownika(Pracownik pracownik) {
     if (liczbaPracownikow == MAX_EMPLOYEES_COUNT) {

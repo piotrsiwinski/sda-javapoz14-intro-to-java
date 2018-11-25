@@ -15,19 +15,26 @@ public class Application {
       int wybor = odczyt.nextInt();
       switch (wybor) {
         case 1:
-        {
-          // zaimplementuj metode toString w klasie Pracownik celem zwrocenia opisu obiektu - ok
-          // zaimplementuj metodę do zwracania tablicy pracownikow w klasie Firma, np. getPracownicy() - ok
-          // wywolaj metode getPracownicy() i przejdz przez tablice pracownikow
-          Pracownik[] pracownicy = firma.getPracownicy();
-          // na kazdym z pracownikow wywolaj metode toString
-        }
+          {
+            // zaimplementuj metode toString w klasie Pracownik celem zwrocenia opisu obiektu - ok
+            // zaimplementuj metodę do zwracania tablicy pracownikow w klasie Firma, np.
+            // getPracownicy() - ok
+            // wywolaj metode getPracownicy() i przejdz przez tablice pracownikow
+            Pracownik[] pracownicy = firma.getPracownicy();
+
+            for (Pracownik prac: pracownicy) {
+              System.out.println(prac.toString());
+            }
+
+            // na kazdym z pracownikow wywolaj metode toString
+            break;
+          }
         case 2:
-            wstawPracownika(firma);
-            break;
+          wstawPracownika(firma);
+          break;
         case 0:
-            czyWyjsc = true;
-            break;
+          czyWyjsc = true;
+          break;
       }
     }
   }
@@ -44,8 +51,7 @@ public class Application {
     Pracownik prac = new Pracownik(imie, nazwisko, pensja);
     boolean wynik = firma.dodajPracownika(prac);
 
-    String message =
-        wynik ? "Nowy pracownik został dodany" : "Nie udało się dodać pracownika";
+    String message = wynik ? "Nowy pracownik został dodany" : "Nie udało się dodać pracownika";
 
     System.out.println(message);
   }
