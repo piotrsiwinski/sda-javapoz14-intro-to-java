@@ -1,7 +1,7 @@
 package pl.sda.poznan.firma;
 
-import java.util.Arrays;
-import java.util.List;
+import pl.sda.poznan.writer.TxtPracownikWriter;
+
 import java.util.Scanner;
 
 public class Application {
@@ -22,6 +22,15 @@ public class Application {
         case 2:
           wstawPracownika(firma);
           break;
+        case 5:
+          {
+            System.out.println("Podaj nazwe pliku");
+            String fileName = odczyt.next();
+            System.out.println("Zapisuje do pliku " + fileName + "...");
+            TxtPracownikWriter writer = new TxtPracownikWriter(fileName);
+            writer.write(firma.getPracownicy());
+            break;
+          }
         case 0:
           czyWyjsc = true;
           break;
