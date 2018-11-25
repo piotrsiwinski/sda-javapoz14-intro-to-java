@@ -57,4 +57,15 @@ public class Pracownik {
   public void setEmail(String email) {
     this.email = email;
   }
+
+  @Override
+  public String toString() {
+    return "Pracownik{" +
+        "id=" + id +
+        ", imie='" + imie + '\'' +
+        ", nazwisko='" + nazwisko + '\'' +
+        ", pensja=" + pensja +
+        ", email='" + email + '\'' +
+        '}';
+  }
 }
