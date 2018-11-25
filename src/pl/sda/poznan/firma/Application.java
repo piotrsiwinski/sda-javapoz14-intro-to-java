@@ -14,24 +14,36 @@ public class Application {
       System.out.println("Wybór: ");
       int wybor = odczyt.nextInt();
       switch (wybor) {
-        case 2:
-          {
+        case 1:
+        {
 
-            // pobierz dane o nowym pracowniku
-            // wywołaj metodę dodajPracownika() na obiekcie typu Firma
-            Pracownik prac = new Pracownik("imie", "naz",2000);
-            boolean wynik = firma.dodajPracownika(prac);
-            // wypisz czy udalo sie zapisac
-            System.out.println("Implementacja w przygotowaniu");
+        }
+        case 2:
+            wstawPracownika(firma);
             break;
-          }
         case 0:
-          {
             czyWyjsc = true;
             break;
-          }
       }
     }
+  }
+
+  private static void wstawPracownika(Firma firma) {
+    // pobierz dane o nowym pracowniku
+    System.out.println("Podaj imie");
+    String imie = odczyt.next();
+    System.out.println("Podaj nazwisko");
+    String nazwisko = odczyt.next();
+    System.out.println("Podaj pensje");
+    double pensja = odczyt.nextDouble();
+    // wywołaj metodę dodajPracownika() na obiekcie typu Firma
+    Pracownik prac = new Pracownik(imie, nazwisko, pensja);
+    boolean wynik = firma.dodajPracownika(prac);
+
+    String message =
+        wynik ? "Nowy pracownik został dodany" : "Nie udało się dodać pracownika";
+
+    System.out.println(message);
   }
 
   private static void printMenu() {
