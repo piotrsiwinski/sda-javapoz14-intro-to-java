@@ -1,8 +1,7 @@
 package pl.sda.poznan.firma;
 
 import pl.sda.poznan.writer.PracownikWriter;
-import pl.sda.poznan.writer.TxtPracownikWriter;
-import pl.sda.poznan.writer.XmlPracownikWriter;
+import pl.sda.poznan.writer.WriterFactory;
 
 import java.util.Scanner;
 
@@ -30,17 +29,11 @@ public class Application {
             String fileName = odczyt.next();
             System.out.println("Zapisuje do pliku " + fileName + "...");
 
-            PracownikWriter writer = null;
-            if (fileName.endsWith(".txt")) {
-              writer = new TxtPracownikWriter(fileName);
-            } else if (fileName.endsWith(".xml")) {
-              writer = new XmlPracownikWriter(fileName);
-            }
-
+            PracownikWriter writer = WriterFactory.createWriter(fileName);
             if (writer != null) {
               writer.write(firma.getPracownicy());
             } else {
-              System.out.println("Nie obslugiwane rozszerzenie");
+              System.out.println("Nie obslugiwane rozszerzenie - obslugiwane to .txt i .xml");
             }
             break;
           }
